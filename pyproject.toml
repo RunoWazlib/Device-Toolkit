@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools >= 77.0.3", "cython"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Device-Toolkit"
+license = "GPL-3.0-or-later"
+dynamic = ["version", "readme"]
+description = "A Python/C++ package that monitors device statistics in real-time"
+authors = [
+    {name = "Ethan Rogers"}
+    ]
+
+[tool.setuptools.dynamic]
+version = {attr = "__version__"}
+readme = {file = "README.md", content-type = "text/markdown"}
+
+[[tool.setuptools.ext-modules]]
+name = "cpp_bindings"
+sources = ["src/cpp_bindings.pyx"]
+language = "c++"
+include-dirs = ["cpp_src"]
