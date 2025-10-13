@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 # C extensions
-src/**/*.cpp
+src/*.cpp
 *.so
 
 # Distribution / packaging
