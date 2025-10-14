@@ -1,4 +1,5 @@
 #pragma once
+#include <stdint.h> // For int64_t
 
 namespace sysinfo {
     // System Info Storage

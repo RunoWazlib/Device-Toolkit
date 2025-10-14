@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 cython = "*"
+setuptools = "*"
 
 [dev-packages]
 pytest = "*"
