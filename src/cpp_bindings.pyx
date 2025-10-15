@@ -9,16 +9,9 @@ cdef extern from "../cpp_src/system_info.h" namespace "sysinfo":
         int numCPUCores
         int OS_true_name # 0 = Linux, 1 = macOS, 2 = Unix
 
-    struct SystemInfoDynamic:
-        int64_t currentMemoryUsageMB
-        int numCPUProcesses
-        int64_t networkUsageMB
-        int OS_true_name # 0 = Linux, 1 = macOS, 2 = Unix
-
     # Function declarations
     int getOSname();
     SystemInfoStatic getSystemInfoStatic();
-    SystemInfoDynamic getSystemInfoDynamic();
 
 # Python wrapping
 def getOSname_py():
@@ -27,5 +20,15 @@ def getOSname_py():
 def getSystemInfoStatic_py():
     return getSystemInfoStatic()
 
-def getSystemInfoDynamic_py():
-    return getSystemInfoDynamic()
+# TODO
+# This belongs in the C++ calls
+#    struct SystemInfoDynamic:
+#        int64_t currentMemoryUsageMB
+#        int numCPUProcesses
+#        int64_t networkUsageMB
+#        int OS_true_name # 0 = Linux, 1 = macOS, 2 = Unix
+#    SystemInfoDynamic getSystemInfoDynamic();
+
+# This belongs in Python wrapping
+# def getSystemInfoDynamic_py():
+#    return getSystemInfoDynamic()

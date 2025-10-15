@@ -17,6 +17,12 @@ readme = {file = "README.md", content-type = "text/markdown"}
 
 [[tool.setuptools.ext-modules]]
 name = "cpp_bindings"
-sources = ["src/cpp_bindings.pyx"]
+sources = [
+    "src/cpp_bindings.pyx",
+    "cpp_src/os_finder.cpp",
+    "cpp_src/system_info_mac.cpp",
+    "cpp_src/system_info_linux.cpp",
+    "cpp_src/system_info_win.cpp"
+    ]
 language = "c++"
 include-dirs = ["cpp_src"]

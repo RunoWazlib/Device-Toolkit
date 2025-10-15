@@ -17,7 +17,8 @@ namespace sysinfo {
 
         uname(&info);
         std::string os_name = info.sysname;
-        std::cout << "Operating System: " << os_name << std::endl;
+        // Print output for debugging
+        // std::cout << "Operating System: " << os_name << std::endl;
 
         if (os_name == "Linux") {
             return 0; // Linux

@@ -8,4 +8,4 @@ PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
 export PYTHONPATH="$PROJECT_ROOT:$PYTHONPATH"
 
 # Build the package without cleaning first
-pip install -e .
+pip install .

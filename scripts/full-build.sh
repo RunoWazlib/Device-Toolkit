@@ -12,4 +12,4 @@ echo "Project Module Path: $PYTHONPATH"
 
 
 # Build the project from .toml file
-pip install -e .
+pip install .

@@ -22,5 +22,5 @@ namespace sysinfo {
     SystemInfoStatic getSystemInfoStatic();
 
     // Function to determine current usage
-    SystemInfoDynamic getSystemInfoDynamic();
+    // SystemInfoDynamic getSystemInfoDynamic();
 }
