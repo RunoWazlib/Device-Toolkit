@@ -11,6 +11,9 @@ authors = [
     {name = "Ethan Rogers"}
     ]
 
+[project.dev]
+test = ["pytest"]
+
 [tool.setuptools.dynamic]
 version = {attr = "__version__"}
 readme = {file = "README.md", content-type = "text/markdown"}
@@ -26,3 +29,6 @@ sources = [
     ]
 language = "c++"
 include-dirs = ["cpp_src"]
+
+[tool.pytest.ini_options]
+testpaths = "tests"
